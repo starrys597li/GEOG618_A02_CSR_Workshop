@@ -47,7 +47,7 @@ plot(envK, main = "Ripley's K-function (nsim=999)")
 ### a. Calculate the Besag's L-function
 L <- envelope(pp, Lest, nsim = 99)
 
-# Plot the L-function and the confidence interval
+# b. Plot the L-function and the confidence envelope
 plot(L, main = "Besag's L-function", xlab = "Distance", ylab = "L(r)")
 lines(L$theo, col = "red", lty = 2) # add the theoretical L-function as a dashed line
 lines(L$upper, col = "black", lty = 2) # add the upper bound of the confidence interval as a dashed line
