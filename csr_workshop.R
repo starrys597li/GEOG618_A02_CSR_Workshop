@@ -24,22 +24,18 @@ unitname(pp) <- "meter"
 
 ################## Ripley's K-function ###############
 
-## a. Create a spatial window to define the spatial extent of the study area
-bbox <- bbox(points)
-win <- owin(xrange = bbox[1,], yrange = bbox[2,])
-
-### b. Calculate Ripley's K-function
+### a. Calculate Ripley's K-function
 Kfun_test <- Kest(pp)
 
-### c. Plot the K-function
+### b. Plot the K-function
 plot(Kfun_test, main = "Ripley's K-function")
 
-### d. Calculate the confidence envelope. This function generates a simulated 
+### c. Calculate the confidence envelope. This function generates a simulated 
 ### envelope of K(r) under CSR, which can be used to assess whether the observed 
 ### K-function deviates significantly from CSR.
 envK <- envelope(pp, Kest, nsim = 999)
 
-### e. Plot the confidence envelope and the observed K-function
+### d. Plot the confidence envelope and the observed K-function
 plot(envK, main = "Ripley's K-function (nsim=999)")
 
 ############### Besag's L-function ###############
