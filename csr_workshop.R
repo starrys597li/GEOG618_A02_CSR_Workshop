@@ -33,13 +33,12 @@ plot(Kfun_test, main = "Ripley's K-function")
 ### c. Calculate the confidence envelope. This function generates a simulated 
 ### envelope of K(r) under CSR, which can be used to assess whether the observed 
 ### K-function deviates significantly from CSR.
-envK <- envelope(pp, Kest, nsim = 999)
+envK <- envelope(pp, Kest, nsim = 99)
 
 ### d. Plot the confidence envelope and the observed K-function
-plot(envK, main = "Ripley's K-function (nsim=999)")
+plot(envK, main = "Ripley's K-function (nsim=99)")
 
 ############### Besag's L-function ###############
-
 ### a. Calculate the Besag's L-function
 L <- envelope(pp, Lest, nsim = 99)
 
