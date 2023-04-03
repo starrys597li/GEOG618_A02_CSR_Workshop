@@ -24,7 +24,7 @@ unitname(pp) <- "meter"
 
 ################## Ripley's K-function ###############
 
-### a. Create a spatial window to define the spatial extent of the study area
+## a. Create a spatial window to define the spatial extent of the study area
 bbox <- bbox(points)
 win <- owin(xrange = bbox[1,], yrange = bbox[2,])
 
